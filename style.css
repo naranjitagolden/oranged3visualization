@@ -3,7 +3,13 @@ html {
 }
 
 .round-button {
-	width:25%;
+	margin: auto;
+	position: relative;
+	width:10%;
+	padding-top:25%;
+
+
+
 }
 .round-button-circle {
 	width: 100%;
@@ -12,9 +18,7 @@ html {
     border-radius: 50%;
 	border:6px solid #FFFFFF;
     overflow:hidden;
-    
     background: #E2502F; 
-    box-shadow: 0 0 3px gray;
 }
 .round-button-circle:hover {
 	background:#E2A32F;
