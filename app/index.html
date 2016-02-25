@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>orange_basic_visualization</title>
+    <script type="text/javascript" src="../d3/d3.min.js"></script>
+    <title>orange</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -24,6 +25,36 @@
     <!-- endbuild -->
   </head>
   <body>
+
+    <script type="text/javascript">
+
+        var dataset = [ 25, 10, 14, 5, 21, 25, 22, 18, 15, 13,
+                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
+        //work space Width and height
+        var w = 500;
+        var h = 100;
+        var barPadding = 1;
+
+        //Creando SVG element canvas
+        var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+        svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr({
+                x: function(d, i) {return i * (w / dataset.length);},
+                y: function(d) { return h - (d * 4); }, 
+                width: w / dataset.length - barPadding,
+                height: function(d){ return d * 4;},
+                fill: function(d) { return "rgb(0, 0, " + (d * 10) + ")";}
+            });
+
+
+        </script>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -31,11 +62,11 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="active"><a href="#">Tools</a></li>
+          <li><a href="#">Focus</a></li>
+          <li><a href="#">Learning</a></li>
         </ul>
-        <h3 class="text-muted">orange_basic_visualization</h3>
+        <h3 class="text-muted">orange</h3>
       </div>
 
       <div class="jumbotron">

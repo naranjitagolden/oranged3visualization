@@ -38,5 +38,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "d3": "^3.5.16"
   }
 }
