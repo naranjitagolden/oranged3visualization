@@ -1,5 +1,5 @@
 html {
-	background-color: #4A4A4A
+    background-color: #4A4A4A
 }
 
 .circles {
@@ -21,9 +21,10 @@ html {
     left: 500%;
     padding-bottom: 100%;
     border-radius: 50%;
-	border:6px solid #FFFFFF;
+    border:6px solid #FFFFFF;
     overflow:hidden;
-    background: #E2502F; 
+    background: 
+    url("http://photos4.meetupstatic.com/photos/member/8/f/0/b/highres_245256619.jpeg"); 
 }
 
 .top-circle {
@@ -34,7 +35,7 @@ html {
     right: 10%;
     padding-bottom: 100%;
     border-radius: 50%;
-	border:6px solid #FFFFFF;
+    border:6px solid #FFFFFF;
     overflow:hidden;
     background: #23C730;
 }
@@ -47,7 +48,7 @@ html {
     left: 300%;
     padding-bottom: 100%;
     border-radius: 50%;
-	border:6px solid #FFFFFF;
+    border:6px solid #FFFFFF;
     overflow:hidden;
     background: #23C730;
 }
@@ -59,7 +60,7 @@ html {
     left: 500%;
     padding-bottom: 100%;
     border-radius: 50%;
-	border:6px solid #FFFFFF;
+    border:6px solid #FFFFFF;
     overflow:hidden;
     background: #23C730;
 }
@@ -71,7 +72,7 @@ html {
     left: 700%;
     padding-bottom: 100%;
     border-radius: 50%;
-	border:6px solid #FFFFFF;
+    border:6px solid #FFFFFF;
     overflow:hidden;
     background: #23C730;
 }
@@ -80,19 +81,19 @@ html {
 
 
 .middle-circle:hover {
-	background:#E2A32F;
+    background:#E2A32F;
 }
 .middle-circle a {
     display:block;
-	float:left;
-	width:100%;
-	padding-top:50%;
+    float:left;
+    width:100%;
+    padding-top:50%;
     padding-bottom:50%;
-	line-height:1em;
-	margin-top:-0.5em;
+    line-height:1em;
+    margin-top:-0.5em;
     
-	text-align:center;
-	color:#e2eaf3;
+    text-align:center;
+    color:#e2eaf3;
     font-family:Verdana;
     font-size:1.2em;
     font-weight:bold;
@@ -105,40 +106,40 @@ html {
 
 /*
 .circles {
-	position: relative;
-	width:10%;
-	height: 1000%
+    position: relative;
+    width:10%;
+    height: 1000%
 }
 
 .circles div {
-	height: 0;
-	position: absolute;
+    height: 0;
+    position: absolute;
 }
 
 .middle-circle {
-	width: 100%;
-	top: 20%;
-	height:0;
-	
+    width: 100%;
+    top: 20%;
+    height:0;
+    
 }
 
 .top-circle {
-	position: absolute;
-	margin-top: 50%;
-	width: 100%;
-	height:0;
-	 
+    position: absolute;
+    margin-top: 50%;
+    width: 100%;
+    height:0;
+     
 }
 
 .right-circle {
-	position: absolute;
-	right: 150px;
-	top: 200px;
-	width: 100%;
-	height:0;
-	padding-bottom: 100%;
+    position: absolute;
+    right: 150px;
+    top: 200px;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
     border-radius: 50%;
-	border:6px solid #FFFFFF;
+    border:6px solid #FFFFFF;
     overflow:hidden;
     background: #23C730; 
 }
