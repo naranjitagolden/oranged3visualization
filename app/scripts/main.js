@@ -3,7 +3,7 @@ var sampleSVG = d3.select("#viz")
         .attr("width", 1000)
         .attr("height", 500);    
 
-    sampleSVG.append("circle")
+ var circle =    sampleSVG.append("circle")
     	.attr("class", "middle-circle")
         .attr("r", 40)
         .attr("cx", 700)
