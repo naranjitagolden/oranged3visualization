@@ -9,5 +9,10 @@ body {
 }
 
 .middle-circle:hover {
-  fill: orange;
+  fill: green;
+}
+
+.around {
+  fill: none;
+  stroke: red;
 }
