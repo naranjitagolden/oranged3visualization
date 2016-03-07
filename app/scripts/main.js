@@ -14,14 +14,17 @@ var circles = svg.selectAll("circle")
             .enter()
             .append("circle");
 
-var cx = Math.PI / 5
-var cy = Math.PI / 2
+var angle = 0; 
+angle = for (angle < dataset.length; i++)
 
-circles.attr("cx", function(d, i) {
-    return (i * cx) + 25;
-})
+var increase = Math.PI * 2 / dataset.length
+var cx = Math.PI / 5
+var cy = Math.sin(angle) * Math.PI * 5
+
+circles.attr("cx", function(d) {
+    return Math.PI / 
         .attr("cy", function(d, i){
-            return (i * cy) + 20
+            return (i * cy) 
         })
         .attr("r", function(d) {
             return d
