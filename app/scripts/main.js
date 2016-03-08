@@ -1,32 +1,49 @@
-// Definir espacio de trabajo
-var w = 1000
-var h = 500
-
-var svg = d3.select("body")
+var svg = d3.select("#viz")
         .append("svg")
-        .attr("height", h)
-        .attr("width", w);
+        .attr("width", 1000)
+        .attr("height", 1000); 
 
-var dataset = [1, 5, 7, 9, 14];
+var originX = 200;
+var originY = 200;
+var innerCircleRadius = 40;
+var outerCircleRadius = 60;   
 
-var circles = svg.selectAll("circle")
-            .data(dataset)
-            .enter()
-            .append("circle");
+var centro =  svg.append("circle")
+        .style("stroke", "black")
+        .style("fill", "white")
+        .attr("r", innerCircleRadius)
+        .attr("cx", originX)
+        .attr("cy", originY);
 
-var angle = 0; 
-angle = for (angle < dataset.length; i++)
+var fuera = svg.append("circle")
+        .style("stroke", "black")
+        .style("fill", "none")
+        .attr("r", outerCircleRadius)
+        .attr("cx", originX)
+        .attr("cy", originY);
 
-var increase = Math.PI * 2 / dataset.length
-var cx = Math.PI / 5
-var cy = Math.sin(angle) * Math.PI * 5
+var circleOriginY = originX + ((outerCircleRadius) * Math.cos(0));
+var circleOriginX = originY + ((outerCircleRadius) * Math.sin(0));
 
-circles.attr("cx", function(d) {
-    return Math.PI / 
-        .attr("cy", function(d, i){
-            return (i * cy) 
-        })
-        .attr("r", function(d) {
-            return d
-        })
+var chairWidth = 20;
+var chair = svg.append("rect").attr({
+    x: circleOriginX - (chairWidth / 2),
+    y: circleOriginY - (chairWidth / 2),
+    width: chairWidth,
+    opacity: 1,
+    height: 20,
+    fill: "none",
+    stroke: "red"
+});
+
+
+var r = 50
+var a = Math.sin(0) 
+var b = Math.cos(0) 
+var c = Math.sin(90) 
+var d = Math.cos(90) 
+var e = Math.sin(180)
+var f = Math.cos(180)
+var g = Math.sin(270)
+var h = Math.cos(270)
 
