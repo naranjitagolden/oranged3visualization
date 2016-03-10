@@ -1,8 +1,17 @@
 // espacio svg
-var espacio = d3.select("#viz")
+
+
+var espacio = d3.select('body');
+var width = 960,
+    height = 500,
+    radius = 50;
+
+var espacio = d3.select("body")
         .append("svg")
         .attr("width", 1000)
-        .attr("height", 500)    
+        .attr("height", 500)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")") ;   
 
 var dataset = ["data visualization", "nuevo ruralismo", "diseño", "identidad"]
 
