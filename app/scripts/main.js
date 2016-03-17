@@ -1,14 +1,14 @@
 // espacio svg
 
 var espacio = d3.select('body');
-var width = 960,
-    height = 500,
+var width = 700,
+    height = 600,
     radius = 50;
 
 var espacio = d3.select("body")
         .append("svg")
-        .attr("width", 1000)
-        .attr("height", 500)
+        .attr("width", width)
+        .attr("height", height)
         .append("g")
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");   
 
