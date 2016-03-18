@@ -1,21 +1,15 @@
-// svg
 
-var width = 700,
-    height = 600,
-    radius = 50;
+var w = 700,
+    h = 600;
 
 var svg = d3.select("body")
         .append("svg")
-        .attr("width", width)
-        .attr("height", height)
+        .attr("width", w)
+        .attr("height", h)
         .append("g")
-        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");   
+        .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");   
 
-var dataset = ["data visualization", "naturaleza", "creación estratégica", "identidad", "humanismo", "tecnología"]
-
-var cx1 = 700
-var cx2 = 300
-
+var dataset = [5, 10, 15, 20, 25];
 
 //circulo central
  var centro =  svg.append("circle")
@@ -39,27 +33,19 @@ var linea  = svg.append("circle")
     .attr("cx", 0)
     .attr("cy", 0);
 
-
-var rad = Math.PI * 2 / dataset.length
-angle = rad * i
-cx = rad * Math.cos(angle)
-cy = rad * Math.sin(angle)
-a = d.map()
-
-
-
-var rx = 200
-var ry = -200
-
 var circles =  svg.selectAll("circle")
-        .dataset(dataset)
+        .data(dataset)
         .enter()
-        .append("circle")
+        .append("circle");
 
-circles.attr("r", 40)
-       .attr("cx", function(d, i) {
-            return 
+circles.attr("cx", function(d, i){
+        return (i * 50) + 10;
        })
+       .attr("cy", h/3)
+       .attr("r", function(d) {
+        return d; 
+
+       });
 
 
 

@@ -3,8 +3,8 @@ body {
  background:  #4A4A4A;
 }
 
-.all-circles {
-	fill:orange;
+.item-circles {
+	fill:none;
 	stroke-width: 5px;
 	stroke: white;
 }
@@ -15,10 +15,7 @@ body {
   stroke: white;
 }
 
-/*.middle-circle:hover {
-  fill: orange;
-}
-*/
+
 .around {
   fill: none;
   stroke: red;
