@@ -39,27 +39,27 @@ var linea  = svg.append("circle")
     .attr("cx", 0)
     .attr("cy", 0);
 
-for (var i = 0; i < dataset.length; i++) {
-    var angle = (Math.PI * 2 / dataset.length) * i;
-}; 
 
-var cx = angle.map(Math.cos)
-var cy = angle.map(Math.sin)
+var rad = Math.PI * 2 / dataset.length
+angle = rad * i
+cx = rad * Math.cos(angle)
+cy = rad * Math.sin(angle)
+a = d.map()
+
+
+
 var rx = 200
 var ry = -200
 
+var circles =  svg.selectAll("circle")
+        .dataset(dataset)
+        .enter()
+        .append("circle")
 
-
- // var circles =  svg.selectAll("circle")
- //        .dataset(dataset)
- //        .enter()
- //        .append("circle");
- //        .attr("cx", function(d, i) {
- //            return ()
- //        })
- //        .attr("r", 40)
- //        .attr("cx", (cx[0] * rx))
- //        .attr("cy", (cy[0] * ry));
+circles.attr("r", 40)
+       .attr("cx", function(d, i) {
+            return 
+       })
 
 
 
