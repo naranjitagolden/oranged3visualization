@@ -33,6 +33,8 @@ var linea  = svg.append("circle")
     .attr("cx", 0)
     .attr("cy", 0);
 
+var rar = Math.PI*2 / dataset.length
+
 var circles =  svg.selectAll("circle")
         .data(dataset)
         .enter()
@@ -40,7 +42,7 @@ var circles =  svg.selectAll("circle")
         .append("circle");
 
 circles.attr("cx", function(d, i){
-        return (i * (Math.PI * 2));
+        return (i * rar);
        })
        .attr("cy", h/3)
        .attr("r", function(d) {
