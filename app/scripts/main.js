@@ -8,7 +8,7 @@ var svg = d3.select("body")
     .append("g")
     .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
 
-var dataset = ["tecnología", "identidad", "humanismo", "naturaleza", "creación Audiovisual", "hola"];
+var dataset = [ "tecnología", "identidad", "humanismo", "naturaleza", "creación Audiovisual", "hola", "estoy perdido"];
 
 //circulo central
 var centro = svg.append("circle")
@@ -25,12 +25,12 @@ var centro = svg.append("circle")
             .style("fill", "red");
     });
 
-//circunsferencia
-var linea = svg.append("circle")
-    .attr("class", "around")
-    .attr("r", 200)
-    .attr("cx", 0)
-    .attr("cy", 0);
+// //circunsferencia
+// var linea = svg.append("circle")
+//     .attr("class", "around")
+//     .attr("r", 200)
+//     .attr("cx", 0)
+//     .attr("cy", 0);
 
 var rar = Math.PI * 2 / dataset.length;
 
@@ -42,9 +42,41 @@ var circles = svg.selectAll("circle")
 circles.attr("cx", function(d, i) {
     var angle = i * rar;
     return Math.cos(angle) * 200;
-})
+    })
+
     .attr("cy", function(d, i) {
         var angle = i * rar;
         return Math.sin(angle) * -200;
     })
-    .attr("r", 50);
+    .attr("r", 50)
+    .attr("fill", "orange")
+    .attr("stroke", "white")
+    .attr("stroke-width", "5px");
+
+    svg.selectAll("text")
+    .data(dataset)
+    .enter()
+    .append("text")
+
+    .text(function(d) {
+        return d;
+    })
+    .attr("class", "text")
+    .attr("x", function(d, i) {
+    var angle = i * rar;
+    return (Math.cos(angle) * 200) - 60;
+    })
+    .attr("y", function(d, i) {
+        var angle = i * rar;
+        return (Math.sin(angle) * -200) + 70;
+    });
+
+
+
+
+
+
+
+
+
+
