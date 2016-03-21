@@ -36,10 +36,11 @@ var linea  = svg.append("circle")
 var circles =  svg.selectAll("circle")
         .data(dataset)
         .enter()
+        .append("g")
         .append("circle");
 
 circles.attr("cx", function(d, i){
-        return (i * 50) + 10;
+        return (i * (Math.PI * 2));
        })
        .attr("cy", h/3)
        .attr("r", function(d) {
