@@ -9,7 +9,7 @@ var svg = d3.select("body")
         .append("g")
         .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");   
 
-var dataset = [5, 10, 15, 20, 25];
+var dataset = ["tecnología", "identidad", "humanismo", "naturaleza", "creación Audiovisual", "hola"];
 
 //circulo central
  var centro =  svg.append("circle")
@@ -42,14 +42,14 @@ var circles =  svg.selectAll("circle")
         .append("circle");
 
 circles.attr("cx", function(d, i){
-        return (i * rar);
+        var angle = i * rar;
+        return Math.cos(angle) * 200;
        })
-       .attr("cy", h/3)
-       .attr("r", function(d) {
-        return d; 
-
-       });
-
+       .attr("cy", function(d,i){
+        var angle = i * rar;
+        return Math.sin(angle) * -200;
+       })
+       .attr("r", 50);
 
 
 
